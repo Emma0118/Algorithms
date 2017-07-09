@@ -22,5 +22,12 @@ const quickSort = arr => {
     return quickSort(left).concat([pivot], quickSort(right)); //连接 左数组、基准数和右数组
 }
 
- const getSort = quickSort([20,44,23,55,77,19]);
-console.log(getSort);
+//  const getSort = quickSort([20,44,23,55,77,19]);
+// console.log(getSort);
+
+function testTime() {
+    console.time('经典排序时间');
+    quickSort([20,44,23,55,77,19]);
+    console.timeEnd('经典排序时间');
+}
+testTime();
