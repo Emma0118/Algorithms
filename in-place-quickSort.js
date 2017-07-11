@@ -31,7 +31,7 @@ function quickSort(arr) {
                 pivotPointer++;
             }
         }
-        //swap(arr, right, pivotPointer);
+        swap(arr, right, pivotPointer);
         return pivotPointer;
     }
 
@@ -53,13 +53,13 @@ function quickSort(arr) {
     return arr;
 }
 
-function testTime() {
-    console.time('in-place排序时间');
-    quickSort([20,44,23,55,77,19]);
-    console.timeEnd('in-place排序时间');
-}
+// function testTime() {
+//     console.time('in-place排序时间');
+//     quickSort([20,44,23,55,77,19]);
+//     console.timeEnd('in-place排序时间');
+// }
 
-// const getSort = quickSort([20,44,23,55,77,19]);
-// console.log(getSort);
+const getSort = quickSort([20,44,23,55,77,19]);
+console.log(getSort);
 
-testTime();
+//testTime();

@@ -1,5 +1,5 @@
 /**
- * Created by majie on 17-7-9.
+ * Created by majie on 17-7-10.
  */
 function quickSort(arr) {
     function swap(arr, a, b) {
@@ -42,6 +42,7 @@ function quickSort(arr) {
                 pivotPointer++;
             }
         }
+        swap(arr, right, pivotPointer);
         return pivotPointer;
     }
 
@@ -58,14 +59,15 @@ function quickSort(arr) {
     return arr;
 }
 
-function testTime() {
-    console.time('in-place排序时间');
-    quickSort([20,44,23,55,77,19]);
-    console.timeEnd('in-place排序时间');
-}
+// function testTime() {
+//     console.time('worst-case-quickSort排序时间');
+//     quickSort([20,44,23,55,77,19]);
+//     console.timeEnd('worst-case-quickSort排序时间');
+// }
 
-// const getSort = quickSort([20,44,23,55,77,19]);
-// console.log(getSort);
 
-testTime();
+const getSort = quickSort([4,7,2,9]);
+console.log(getSort);
+
+//testTime();
 
