@@ -31,7 +31,7 @@ function quickSort(arr) {
                 pivotPointer++;
             }
         }
-        swap(arr, right, pivotPointer);
+        //swap(arr, right, pivotPointer);
         return pivotPointer;
     }
 
